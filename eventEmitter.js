@@ -22,4 +22,13 @@ eventEmitter.on('data_received', function(){
 // 触发 connection 事件 
 eventEmitter.emit('connection');
 
+
+
+
+eventEmitter.on('123', function() { 
+    console.log('123 事件触发'); 
+}); 
+setTimeout(function() { 
+    eventEmitter.emit('123'); 
+}, 1000); 
 console.log("程序执行完毕。");
